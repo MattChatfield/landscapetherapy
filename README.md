@@ -1,1 +1,2 @@
 # Landscape therapy
+# Static site
