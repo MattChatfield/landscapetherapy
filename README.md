@@ -1,3 +1,3 @@
 # Landscape therapy
 Static site
-Using Plesk Git extension
+To be hosted on GH pages
