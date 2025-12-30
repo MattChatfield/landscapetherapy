@@ -12,6 +12,7 @@
     --text-main: #474747;
     --border-light: #7A7A7A;
     --font-main: 'Lato', sans-serif;
+	--font-title: 'Chivo', sans-serif;
 }
 
 
@@ -3232,7 +3233,7 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 12pt;
 				line-height: 1.35em;
 			}
 
@@ -3315,7 +3316,7 @@ input, select, textarea {
 			input[type="button"],
 			button,
 			.button {
-				width: 100%;
+				/* width: 100%; */
 				display: block;
 			}
 

@@ -6,11 +6,21 @@
     font-style: normal;
 }
 
+
+
 :root {
     --primary-colour: #5DA26C;
     --text-main: #474747;
     --border-light: #7A7A7A;
     --font-main: 'Lato', sans-serif;
+	--font-title: 'Chivo', sans-serif;
+}
+
+.chivo-font {
+  font-family: var(--font-title);
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 body {
@@ -46,7 +56,10 @@ blockquote {
   color: #7A7A7A;
 }
 
-/* Font Pairing Overrides: Alegreya + Lato */
+#banner header h2 {
+	color: #fff;
+	text-shadow: 0 0 3px black;
+}
 
 /* Body text - Lato */
 body, input, select, textarea {
@@ -57,11 +70,11 @@ body, input, select, textarea {
     -webkit-font-smoothing: antialiased; /* Improves serif rendering on some browsers */
 }
 
-/* Headings - Alegreya */
+/* Headings - Chivo */
 h2, h3, h4, h5, h6, .logo {
-    font-family: 'Alegreya', serif;
+    font-family: var(--font-title);
     font-weight: 700;
-    text-transform: none; /* Crucial for Alegreya to show its calligraphic character */
+    text-transform: none; 
     letter-spacing: 0.0em;
     color: #111;
 }
@@ -114,6 +127,29 @@ strong, b {
     text-decoration: none;
     color: #fff;  			/* always white. Controls the 'currentColor' in your SVG */
 }
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--primary-colour); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  transition: opacity 0.3s;
+  min-width: 45px;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 840px) {
