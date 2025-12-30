@@ -175,4 +175,8 @@ strong, b {
     flex-shrink: 0;        /* Prevents the logo from squishing on small screens */
 }
 
+#svglogo {
+	display: none;
+}
+
 }
