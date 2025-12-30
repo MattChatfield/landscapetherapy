@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'hobo_stdmedium';
+    src: url('assets/webfonts/hobo_std_medium-webfont.woff2') format('woff2'),
+         url('assets/webfonts/hobo_std_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-colour: #5DA26C;
+    --text-main: #474747;
+    --border-light: #7A7A7A;
+    --font-main: 'Lato', sans-serif;
+}
+
+body {
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #555;
+}
+
+.social {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  color: #333;
+}
+
+.social:hover {
+  color: #7A7A7A;
+}
+
+/* Font Pairing Overrides: Alegreya + Lato */
+
+/* Body text - Lato */
+body, input, select, textarea {
+    font-family: var(--font-main);
+    font-weight: 300; /* Light weight makes Lato look more elegant for body text */
+    line-height: 1.8;
+    color: #2c2c2c;
+    -webkit-font-smoothing: antialiased; /* Improves serif rendering on some browsers */
+}
+
+/* Headings - Alegreya */
+h2, h3, h4, h5, h6, .logo {
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
+    text-transform: none; /* Crucial for Alegreya to show its calligraphic character */
+    letter-spacing: 0.0em;
+    color: #111;
+}
+
+/* H1 only */
+h1 {
+    font-family: 'hobo_stdmedium', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.0em;
+    color: var(--primary-colour);
+}
+
+/* Arcana specific: Handling the Sidebar and Nav */
+#nav > ul > li > a {
+    font-family: var(--font-main);
+    font-weight: 400;
+    text-transform: none;
+    font-size: 0.95em;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+ .logo-svg {
+    width: 3.5em;          /* Scales the logo relative to text size */
+    height: 3.5em;
+    flex-shrink: 0;        /* Prevents the logo from squishing on small screens */
+}
+
+#logo h1 {
+        font-size: 3.5rem;
+		padding: 0;
+    }
+
+/* Container sizing */
+#header {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* The Flexbox Wrapper */
+#logo {
+    display: flex;
+	justify-content: center;
+    align-items: center;  /*Vertically centers text with logo */
+    gap: 20px;           /* Space between SVG and H1 */
+    text-decoration: none;
+    color: #fff;  			/* always white. Controls the 'currentColor' in your SVG */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 840px) {
+    #header {
+       /*  width: 95vw;     Slightly wider on small screens to use space */
+    }
+
+    .title {
+        display: flex;
+		flex-direction: column; /* Stacks logo on top of text */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+		text-shadow: black 0 0 3px;
+    }
+ 
+ .logo-svg {
+    width: 1.5em;          /* Scales the logo relative to text size */
+    height: 1.5em;
+    flex-shrink: 0;        /* Prevents the logo from squishing on small screens */
+}
+
+}
