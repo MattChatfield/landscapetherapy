@@ -22,7 +22,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.css">
 		<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-		<link rel="stylesheet" href="/css/grid-gallery.css?v=1.0" />
+		<link rel="stylesheet" href="assets/css/grid-gallery.css?v=1.0" />
 
 	</head>
 	<body class="is-preload" id="top">
@@ -80,20 +80,25 @@
 								<div class="grid-item"></div>
 								<div class="grid-item grid-item--width2"></div>
 							<!-- Content -->
-
+								<div class="masonry-item">
+                       				<div class="card">
+                            			<a href="images/gallery/felling-oak-lg.jpg" alt="Felling the oak" data-caption="Felling the oak"><img src="images/gallery/felling-oak.jpg" class="card-img-top" alt="Felling the oak"></a>
+										<p>We felled a selected oak from the client's own woodland</p>
+                        			</div>
+                    			</div>
+								<div class="masonry-item">
+                       				<div class="card">
+                            			<a href="images/gallery/forwarder-lg.jpg" alt="Our timber forwarder in action" data-caption="Our timber forwarder in action"><img src="images/gallery/forwarder.jpg" class="card-img-top" alt="Gateway image"></a>
+										<p>Our timber forwarder in action</p>
+                        			</div>
+                    			</div>
 								<div class="masonry-item">
                        				<div class="card">
                             			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
 										<p>Image caption in paragraph</p>
                         			</div>
                     			</div>
-																<div class="masonry-item">
-                       				<div class="card">
-                            			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
-										<p>Image caption in paragraph</p>
-                        			</div>
-                    			</div>
-																<div class="masonry-item">
+								<div class="masonry-item">
                        				<div class="card">
                             			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
 										<p>Image caption in paragraph</p>
@@ -105,7 +110,7 @@
 									
 
 <script>
-    // Initialize Masonry
+    // Initialize Masonry using imagesloaded
     var masonryContainer = document.getElementById('masonry-container');
 	imagesLoaded(masonryContainer, function() {
     var masonry = new Masonry(masonryContainer, {

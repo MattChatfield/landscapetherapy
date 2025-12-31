@@ -31,11 +31,26 @@
     display: inline-block;
     margin-bottom: 10px;
     width: 100%;
-    padding: 4px;           /* add padding around each item */
+    padding: 6px;           /* add padding around each item */
     box-sizing: border-box; /* ensures padding doesn't break layout */
-    background: #fff;       /* optional, to give images a framed look */
+    background: #eef;       /* optional, to give images a framed look */
     border-radius: 6px;     /* keep rounded corners around frame */
 }
+
+.card a {
+  text-decoration: none;
+}
+
+.card a img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: $card-border-width solid $card-border-color;
+}
+
 
 /* 3 columns by default */
 .grid-sizer { width: 33.333%; }
