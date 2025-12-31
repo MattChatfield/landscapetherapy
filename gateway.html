@@ -16,8 +16,14 @@
 
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="css.css" />
+		
+		<!-- Gallery dependencies -->
 		<script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.css">
+		<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<link rel="stylesheet" href="/css/grid-gallery.css?v=1.0" />
+
 	</head>
 	<body class="is-preload" id="top">
 		<div id="page-wrapper">
@@ -61,46 +67,56 @@
 
 
 			<!-- Main -->
-				<section class="wrapper style1">
+				<section class="wrapper style1 gallery-block grid-gallery">
 					<div class="container">
 						<div id="content">
-
+							<header>
+								<h2>From tree to gate</h2>
+								<p>How we felled a tree, extracted the timber, milled it ourselves and installed a new gate to the client's field.</p>
+							</header>
+							<div class="row" id="masonry-container">
+								<div class="masonry-sizer"></div>
+								<div class="grid-sizer"></div>
+								<div class="grid-item"></div>
+								<div class="grid-item grid-item--width2"></div>
 							<!-- Content -->
 
-								<article>
-									<header>
-										<h2>No Sidebar</h2>
-										<p>All content, all the time.</p>
-									</header>
-
-									<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
-
-									<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-									Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-									Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-									consequat etiam lorem ipsum dolor sit amet nullam.</p>
-
-									<h3>And Yet Another Subheading</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-									justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-									ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-									vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-									Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-									rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-									Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-									Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
-
-									<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-									quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-									Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-									fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-									Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-									Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-								</article>
-
+								<div class="masonry-item">
+                       				<div class="card">
+                            			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
+										<p>Image caption in paragraph</p>
+                        			</div>
+                    			</div>
+																<div class="masonry-item">
+                       				<div class="card">
+                            			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
+										<p>Image caption in paragraph</p>
+                        			</div>
+                    			</div>
+																<div class="masonry-item">
+                       				<div class="card">
+                            			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
+										<p>Image caption in paragraph</p>
+                        			</div>
+                    			</div>						
 						</div>
 					</div>
 				</section>
+									
+
+<script>
+    // Initialize Masonry
+    var masonryContainer = document.getElementById('masonry-container');
+	imagesLoaded(masonryContainer, function() {
+    var masonry = new Masonry(masonryContainer, {
+        itemSelector: '.masonry-item',
+		percentPosition: true
+    });
+	});
+</script>
+
+<!-- Initialize BaguetteBox -->
+<script> baguetteBox.run('.grid-gallery', { animation: 'slideIn'});</script>
 
 			<!-- Footer -->
 				<div id="footer" >
