@@ -16,14 +16,8 @@
 
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="css.css" />
-		
-		<!-- Gallery dependencies -->
-		<script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.13.0/dist/baguetteBox.min.css">
-		<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-		<link rel="stylesheet" href="assets/css/grid-gallery.css?v=1.0" />
-
+		<link rel="stylesheet" href="assets/css/masonry-gallery.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
 	</head>
 	<body class="is-preload" id="top">
 		<div id="page-wrapper">
@@ -55,11 +49,15 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="index.html#services">Services</a></li>
-								<li><a href="index.html#about">About us</a></li>
-								<li class="current"><a href="index.html#projects">Projects</a></li>
-								<li><a href="index.html#contact">Contact</a></li>
+								<li ><a href="index.html">Home</a></li>
+								<li><a href="#services">Services</a></li>
+								<li><a href="#about">About us</a></li>
+								<li class="current">
+									<a href="#projects">Projects</a>
+								<ul>
+									<li><a href="gateway.html">New field gate</a></li>
+								</ul>
+								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</nav>
 
@@ -67,61 +65,55 @@
 
 
 			<!-- Main -->
-				<section class="wrapper style2 gallery-block grid-gallery">
+				<section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-							<header>
-								<h2>From tree to gate</h2>
-								<p>How we felled a tree, extracted the timber, milled it ourselves and installed a new gate to the client's field.</p>
-							</header>
-							<div class="row" id="masonry-container">
-								<div class="masonry-sizer"></div>
-								<div class="grid-sizer"></div>
-								<div class="grid-item"></div>
-								<div class="grid-item grid-item--width2"></div>
+
 							<!-- Content -->
-								<div class="masonry-item">
-                       				<div class="card">
-                            			<a href="images/gallery/felling-oak-lg.jpg" alt="Felling the oak" data-caption="Felling the oak"><img src="images/gallery/felling-oak.jpg" class="card-img-top" alt="Felling the oak"></a>
-										<p>We felled a selected oak from the client's own woodland</p>
-                        			</div>
-                    			</div>
-								<div class="masonry-item">
-                       				<div class="card">
-                            			<a href="images/gallery/forwarder-lg.jpg" alt="Our timber forwarder in action" data-caption="Our timber forwarder in action"><img src="images/gallery/forwarder.jpg" class="card-img-top" alt="Gateway image"></a>
-										<p>Our timber forwarder in action</p>
-                        			</div>
-                    			</div>
-								<div class="masonry-item">
-                       				<div class="card">
-                            			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
-										<p>Image caption in paragraph</p>
-                        			</div>
-                    			</div>
-								<div class="masonry-item">
-                       				<div class="card">
-                            			<a href="images/gallery/gateway-lg.jpg" alt="Gateway image 1" data-caption="Image caption"><img src="images/gallery/gateway.jpg" class="card-img-top" alt="Gateway image"></a>
-										<p>Image caption in paragraph</p>
-                        			</div>
-                    			</div>						
+
+								<article>
+									<header>
+										<h2>Design and install a field gate with client's own timber</h2>
+										<p>How we felled a tree, extracted the timber, milled it ourselves and installed a new gate to the client's field.</p>
+									</header>
+
+									<div class="gallery-grid">
+										<div class="gallery-item">
+											<a href="images/gallery/felling-oak-lg.jpg" data-caption="Felling a selected oak from the client's woodland">
+												<img src="images/gallery/felling-oak.jpg" alt="Felling an Oak tree" />
+											</a>
+											<div class="caption">We felled a selected oak from the client's own woodland</div>
+										</div>
+
+										<div class="gallery-item">
+											<a href="images/gallery/forwarder-lg.jpg" data-caption="Our timber forwarder extracting timber">
+												<img src="images/gallery/forwarder.jpg" alt="Timber forwarder in action" />
+											</a>
+											<div class="caption">Our timber forwarder in action</div>
+										</div>
+										<div class="gallery-item">
+											<a href="images/gallery/peterson-sawmill-lg.jpg" data-caption="The timber is milled and finished using our Peterson sawmill">
+												<img src="images/gallery/peterson-sawmill.jpg" alt="The timber is milled using our Peterson sawmill" />
+											</a>
+											<div class="caption">The timber is milled using our Peterson sawmill</div>
+										</div>	
+										<div class="gallery-item">
+											<a href="images/gallery/gateway-lg.jpg" data-caption="Installing the new oak gate">
+												<img src="images/gallery/gateway.jpg" alt="Installing the new oak gate" />
+											</a>
+											<div class="caption">Installing the new oak gate</div>									
+										</div>
+										<div class="gallery-item">
+											<a href="images/gallery/new-gate-lg.jpg" data-caption="The completed field gate plus kissing gate">
+												<img src="images/gallery/new-gate.jpg" alt="The completed gate" />
+											</a>
+											<div class="caption">The completed field gate plus kissing gate</div>									
+										</div>
+								</article>
+
 						</div>
 					</div>
 				</section>
-									
-
-<script>
-    // Initialize Masonry using imagesloaded
-    var masonryContainer = document.getElementById('masonry-container');
-	imagesLoaded(masonryContainer, function() {
-    var masonry = new Masonry(masonryContainer, {
-        itemSelector: '.masonry-item',
-		percentPosition: true
-    });
-	});
-</script>
-
-<!-- Initialize BaguetteBox -->
-<script> baguetteBox.run('.grid-gallery', { animation: 'slideIn'});</script>
 
 			<!-- Footer -->
 				<div id="footer" >
@@ -130,8 +122,7 @@
 							<section class="col-6 col-12-mobilep">
 								<h3>Contact us</h3>
 								<ul class="links">
-									<li><a target="_blank" href="https://maps.app.goo.gl/HzA7Jj7L3RJxwppy8">Middleham &middot; Wilmingham Lane &middot; Freshwater &middot; Isle
-of Wight &middot; PO40 9UQ</a></li>
+									<li><a target="_blank" href="https://maps.app.goo.gl/HzA7Jj7L3RJxwppy8">Middleham &middot; Wilmingham Lane &middot; Freshwater &middot; Isle of Wight &middot; PO40 9UQ</a></li>
 									<li>tel: 01983 760011 &middot; mobile: <a href="tel:+447966292334">07966 292334</a></li>
 
 								</ul>
@@ -193,6 +184,10 @@ of Wight &middot; PO40 9UQ</a></li>
 			<script src="assets/js/main.js"></script>
 			<script src="https://web3forms.com/client/script.js" async defer></script>
 
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+
 <script>
 (function() {
     // 1. Banner Logic (Encapsulated)
@@ -236,6 +231,28 @@ const mybutton = document.getElementById("myBtn");
             });
         });
     }
+// 3. Gallery Initialization
+const grid = document.querySelector('.gallery-grid');
+if (grid) {
+    imagesLoaded(grid, function() {
+        // Initialize Masonry
+        new Masonry(grid, {
+            itemSelector: '.gallery-item',
+            columnWidth: '.gallery-item',
+            percentPosition: true,
+            gutter: 20
+        });
+
+        // 4. Lightbox Initialization (Triggered after images are ready)
+        if (typeof baguetteBox !== 'undefined') {
+            baguetteBox.run('.gallery-grid', {
+                animation: 'fadeIn',
+                noScrollbars: true,
+                buttons: true // Ensures navigation arrows appear
+            });
+        }
+    });
+}
 })();
 </script>
 
