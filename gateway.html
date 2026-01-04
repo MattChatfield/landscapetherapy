@@ -16,8 +16,8 @@
 
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="css.css" />	
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
 		<link rel="stylesheet" href="assets/css/masonry-gallery.css" />
+		<link rel="stylesheet" href="assets/css/lightbox.css"  />
 	</head>
 	<body class="is-preload" id="top">
 		<div id="page-wrapper">
@@ -73,41 +73,26 @@
 
 								<article>
 									<header>
-										<h2>Design and install a field gate with client's own timber</h2>
+										<h2>Design and install a set of gates with client's own timber</h2>
 										<p>How we felled a tree, extracted the timber, milled it ourselves and installed a new gate to the client's field.</p>
 									</header>
 
 									<div class="gallery-grid">
 										<div class="gallery-item">
-											<a href="images/gallery/felling-oak-lg.jpg" data-caption="Felling a selected oak from the client's woodland">
-												<img src="images/gallery/felling-oak.jpg" alt="Felling an Oak tree" />
-											</a>
-											<div class="caption">We felled a selected oak from the client's own woodland</div>
+											<a href="images/gallery/felling-oak-lg.jpg" data-lightbox="gateway" data-title="Felling a selected oak from the client's woodland" data-alt="Felling an Oak tree"><img src="images/gallery/felling-oak.jpg" alt="Felling an Oak tree" /><p class="gallery-caption">We felled a selected oak from the client's own woodland</p></a>
 										</div>
 
 										<div class="gallery-item">
-											<a href="images/gallery/forwarder-lg.jpg" data-caption="Our timber forwarder extracting timber">
-												<img src="images/gallery/forwarder.jpg" alt="Timber forwarder in action" />
-											</a>
-											<div class="caption">Our timber forwarder in action</div>
+											<a href="images/gallery/forwarder-lg.jpg" data-lightbox="gateway" data-title="Our timber forwarder extracting timber" data-alt="Our timber forwarder extracting timber"><img src="images/gallery/forwarder.jpg" alt="Felling an Oak tree" /><p class="gallery-caption">Our timber forwarder in action</p></a>
 										</div>
 										<div class="gallery-item">
-											<a href="images/gallery/peterson-sawmill-lg.jpg" data-caption="The timber is milled and finished using our Peterson sawmill">
-												<img src="images/gallery/peterson-sawmill.jpg" alt="The timber is milled using our Peterson sawmill" />
-											</a>
-											<div class="caption">The timber is milled using our Peterson sawmill</div>
+											<a href="images/gallery/peterson-sawmill-lg.jpg" data-lightbox="gateway" data-title="The timber is milled and finished using our Peterson sawmill" data-alt="Peterson sawmill"><img src="images/gallery/peterson-sawmill.jpg" alt="Peterson sawmill"/><p class="gallery-caption">The timber is milled and finished using our Peterson sawmill</p></a>											
 										</div>	
 										<div class="gallery-item">
-											<a href="images/gallery/gateway-lg.jpg" data-caption="Installing the new oak gate">
-												<img src="images/gallery/gateway.jpg" alt="Installing the new oak gate" />
-											</a>
-											<div class="caption">Installing the new oak gate</div>									
+											<a href="images/gallery/gateway-lg.jpg" data-lightbox="gateway" data-title="Installing the new oak gate" data-alt="Peterson sawmill"><img src="images/gallery/gateway.jpg" alt="Installing a new oak gate" /><p class="gallery-caption">Installing the new oak gate</p></a>																			
 										</div>
 										<div class="gallery-item">
-											<a href="images/gallery/new-gate-lg.jpg" data-caption="The completed field gate plus kissing gate">
-												<img src="images/gallery/new-gate.jpg" alt="The completed gate" />
-											</a>
-											<div class="caption">The completed field gate plus kissing gate</div>									
+											<a href="images/gallery/new-gate-lg.jpg" data-lightbox="gateway" data-title="The completed field gate plus kissing gate" data-alt="The completed field gate plus kissing gate"><img src="images/gallery/new-gate.jpg" alt="Installing a new oak gate" /><p class="gallery-caption">The completed field gate plus kissing gate</p></a>								
 										</div>
 								</article>
 
@@ -186,7 +171,7 @@
 
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+<script src="assets/js/lightbox.js"></script>
 
 <script>
 (function() {
@@ -243,14 +228,6 @@ if (grid) {
             gutter: 20
         });
 
-        // 4. Lightbox Initialization (Triggered after images are ready)
-        if (typeof baguetteBox !== 'undefined') {
-            baguetteBox.run('.gallery-grid', {
-                animation: 'fadeIn',
-                noScrollbars: true,
-                buttons: true // Ensures navigation arrows appear
-            });
-        }
     });
 }
 })();
