@@ -31,10 +31,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  /* text-decoration: underline; */
-}
-
 .caption {
   font-size: 0.9rem;
   color: #666;
@@ -152,10 +148,6 @@ strong, b {
 
 /* Mobile Responsiveness */
 @media (max-width: 840px) {
-    #header {
-       /*  width: 95vw;     Slightly wider on small screens to use space */
-    }
-
     .title {
         display: flex;
 		flex-direction: column; /* Stacks logo on top of text */
