@@ -1,5 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /archive/
+Disallow: /temp/
+Disallow: /no-sidebar.html
 
 # Sitemap
 Sitemap: https://landscapetherapy.co.uk/sitemap.xml
